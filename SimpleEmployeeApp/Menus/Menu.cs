@@ -42,7 +42,7 @@ namespace SimpleEmployeeApp.Menus
                             }
                             else
                             {
-                                StaffMenu();
+                                StaffMenu(employee);
                             }
                         }
 
@@ -168,9 +168,69 @@ namespace SimpleEmployeeApp.Menus
             }
         }
 
-        public void StaffMenu()
+        public void StaffMenu(Employee employee)
         {
+            var flag = true;
 
+            while (flag)
+            {
+                PrintAdminMenu();
+                Console.Write("\nPlease enter your option: ");
+                string option = Console.ReadLine();
+
+                switch (option)
+                {
+                    case "1":
+                        employeeService.PrintEmployee(employee);
+                        HoldScreen();
+
+                        break;                 
+                   
+                    case "2":                  
+
+                        Console.Write("Enter employee first name: ");
+                        var fName = Console.ReadLine();
+                        Console.Write("Enter employee last name: ");
+                        var lName = Console.ReadLine();
+                        Console.Write("Enter employee email: ");
+
+                        var phoneNo = Console.ReadLine();
+
+                        int newRole;
+                        do
+                        {
+                            Console.Write("Enter employee role: \nenter 1 for Admin\nenter 2 for Security\nenter 3 for Cleaner\nenter 4 for Manager: ");
+                        } while (!(int.TryParse(Console.ReadLine(), out newRole) && IsValid(newRole, 1, 4)));
+
+
+                        int newGender;
+                        do
+                        {
+                            Console.Write("Enter employee gender: \nEnter 1 for Male\nEnter 2 for Female\n 3 for RatherNotSay: ");
+                        } while (!(int.TryParse(Console.ReadLine(), out newGender) && IsValid(newGender, 1, 3)));
+
+                        employeeService.Update(employee.Id, fName, lName, (Gender)newGender, (Role)newRole, phoneNo);
+
+                        HoldScreen();
+                        break;
+
+                    case "3":
+                        Console.Write("Enter your old password: ");
+                        var oldPassword = Console.ReadLine();
+                        Console.Write("Enter your new password: ");
+                        var newPassword = Console.ReadLine();
+                        employeeService.ChangePassword(employee.Code, oldPassword, newPassword);
+
+                        HoldScreen();
+                        break;
+                    case "0":
+                        flag = false;
+                        break;
+                    default:
+                        Console.WriteLine("Invalid input!");
+                        break;
+                }
+            }
         }
 
         public void PrintMenu()
