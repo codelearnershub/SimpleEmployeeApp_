@@ -174,7 +174,7 @@ namespace SimpleEmployeeApp.Menus
 
             while (flag)
             {
-                PrintAdminMenu();
+                PrintStaffMenu();
                 Console.Write("\nPlease enter your option: ");
                 string option = Console.ReadLine();
 
