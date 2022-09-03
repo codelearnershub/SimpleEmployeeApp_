@@ -1,0 +1,16 @@
+C:\Users\abdulhamiid\Desktop\SimpleEmployeeApp\bin\Debug\net5.0\SimpleEmployeeApp.exe
+C:\Users\abdulhamiid\Desktop\SimpleEmployeeApp\bin\Debug\net5.0\SimpleEmployeeApp.deps.json
+C:\Users\abdulhamiid\Desktop\SimpleEmployeeApp\bin\Debug\net5.0\SimpleEmployeeApp.runtimeconfig.json
+C:\Users\abdulhamiid\Desktop\SimpleEmployeeApp\bin\Debug\net5.0\SimpleEmployeeApp.runtimeconfig.dev.json
+C:\Users\abdulhamiid\Desktop\SimpleEmployeeApp\bin\Debug\net5.0\SimpleEmployeeApp.dll
+C:\Users\abdulhamiid\Desktop\SimpleEmployeeApp\bin\Debug\net5.0\SimpleEmployeeApp.pdb
+C:\Users\abdulhamiid\Desktop\SimpleEmployeeApp\obj\Debug\net5.0\SimpleEmployeeApp.csproj.AssemblyReference.cache
+C:\Users\abdulhamiid\Desktop\SimpleEmployeeApp\obj\Debug\net5.0\SimpleEmployeeApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\abdulhamiid\Desktop\SimpleEmployeeApp\obj\Debug\net5.0\SimpleEmployeeApp.AssemblyInfoInputs.cache
+C:\Users\abdulhamiid\Desktop\SimpleEmployeeApp\obj\Debug\net5.0\SimpleEmployeeApp.AssemblyInfo.cs
+C:\Users\abdulhamiid\Desktop\SimpleEmployeeApp\obj\Debug\net5.0\SimpleEmployeeApp.csproj.CoreCompileInputs.cache
+C:\Users\abdulhamiid\Desktop\SimpleEmployeeApp\obj\Debug\net5.0\SimpleEmployeeApp.dll
+C:\Users\abdulhamiid\Desktop\SimpleEmployeeApp\obj\Debug\net5.0\refint\SimpleEmployeeApp.dll
+C:\Users\abdulhamiid\Desktop\SimpleEmployeeApp\obj\Debug\net5.0\SimpleEmployeeApp.pdb
+C:\Users\abdulhamiid\Desktop\SimpleEmployeeApp\obj\Debug\net5.0\SimpleEmployeeApp.genruntimeconfig.cache
+C:\Users\abdulhamiid\Desktop\SimpleEmployeeApp\obj\Debug\net5.0\ref\SimpleEmployeeApp.dll
