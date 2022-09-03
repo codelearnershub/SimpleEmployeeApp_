@@ -128,12 +128,18 @@ namespace SimpleEmployeeApp.Services
             if(employee == null)
             {
                 Console.WriteLine($"Employee with the code: {code} not found");
+                return;
             }
 
             if(employee.Password != oldPassword)
             {
                 Console.WriteLine("Invalid code or password!");
+                return;
             }
+
+            employee.Password = newPassword;
+            Console.WriteLine("You successfully change your password.");
+
         }
 
         public Employee Login(string code, string password)
