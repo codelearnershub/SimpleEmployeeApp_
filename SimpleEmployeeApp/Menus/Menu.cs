@@ -49,6 +49,7 @@ namespace SimpleEmployeeApp.Menus
                         break;
                     case "0":
                         flag = false;
+                        Console.WriteLine("Thank you for using our App...");
                         break;
                     default:
                         Console.WriteLine("Invalid input!");
@@ -118,6 +119,45 @@ namespace SimpleEmployeeApp.Menus
                             Console.WriteLine("Employee not found!");
                         }
                         break;
+                        
+                    case "4":
+                        Console.Write("Enter the id of employee to view: ");
+                        int editId = int.Parse(Console.ReadLine());
+
+                        Console.Write("Enter employee first name: ");
+                        var fName = Console.ReadLine();
+                        Console.Write("Enter employee last name: ");
+                        var lName = Console.ReadLine();
+                        Console.Write("Enter employee email: ");
+                        
+                        var phoneNo = Console.ReadLine();
+
+                        int newRole;
+                        do
+                        {
+                            Console.Write("Enter employee role: \nenter 1 for Admin\nenter 2 for Security\nenter 3 for Cleaner\nenter 4 for Manager: ");
+                        } while (!(int.TryParse(Console.ReadLine(), out newRole) && IsValid(newRole, 1, 4)));
+
+
+                        int newGender;
+                        do
+                        {
+                            Console.Write("Enter employee gender: \nEnter 1 for Male\nEnter 2 for Female\n 3 for RatherNotSay: ");
+                        } while (!(int.TryParse(Console.ReadLine(), out newGender) && IsValid(newGender, 1, 3)));
+
+                        employeeService.Update(editId, fName, lName, (Gender)newGender, (Role)newRole, phoneNo);
+
+                        HoldScreen();
+                        break;
+
+                    case "5":
+                        Console.Write("Enter the id of employee to delete: ");
+                        int empId = int.Parse(Console.ReadLine());
+                        employeeService.Delete(empId);
+
+                        HoldScreen();
+                        break;
+                        
                     case "0":
                         flag = false;
                         break;
