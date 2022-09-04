@@ -188,28 +188,20 @@ namespace SimpleEmployeeApp.Menus
                    
                     case "2":                  
 
-                        Console.Write("Enter employee first name: ");
+                        Console.Write("Enter your first name: ");
                         var fName = Console.ReadLine();
-                        Console.Write("Enter employee last name: ");
+                        Console.Write("Enter your last name: ");
                         var lName = Console.ReadLine();
-                        Console.Write("Enter employee email: ");
-
+                        Console.Write("Enter your phone nummber: ");
                         var phoneNo = Console.ReadLine();
-
-                        int newRole;
-                        do
-                        {
-                            Console.Write("Enter employee role: \nenter 1 for Admin\nenter 2 for Security\nenter 3 for Cleaner\nenter 4 for Manager: ");
-                        } while (!(int.TryParse(Console.ReadLine(), out newRole) && IsValid(newRole, 1, 4)));
-
 
                         int newGender;
                         do
                         {
-                            Console.Write("Enter employee gender: \nEnter 1 for Male\nEnter 2 for Female\n 3 for RatherNotSay: ");
+                            Console.Write("Enter your gender: \nEnter 1 for Male\nEnter 2 for Female\nEnter 3 for RatherNotSay: ");
                         } while (!(int.TryParse(Console.ReadLine(), out newGender) && IsValid(newGender, 1, 3)));
 
-                        employeeService.Update(employee.Id, fName, lName, (Gender)newGender, (Role)newRole, phoneNo);
+                        employeeService.Update(employee.Id, fName, lName, (Gender)newGender, employee.Role, phoneNo);
 
                         HoldScreen();
                         break;
