@@ -97,12 +97,12 @@ namespace SimpleEmployeeApp.Menus
                         var employee = employeeService.Create(firstName, lastName, email, password, (Gender)gender, (Role)role, phone);
 
                         Console.WriteLine("Employee added successfully.");
-
+                        HoldScreen();
                         break;
 
                     case "2":
                         employeeService.GetAll();
-
+                        HoldScreen();
                         break;
 
                     case "3":
@@ -118,6 +118,7 @@ namespace SimpleEmployeeApp.Menus
                         {
                             Console.WriteLine("Employee not found!");
                         }
+                        HoldScreen();
                         break;
                         
                     case "4":
