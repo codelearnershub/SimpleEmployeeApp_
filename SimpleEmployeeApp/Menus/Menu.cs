@@ -253,5 +253,12 @@ namespace SimpleEmployeeApp.Menus
         {
             return num >= start && num <= end;
         }
+        
+        private void HoldScreen()
+        {
+            Console.WriteLine("Press Enter key to continue.");
+            Console.ReadKey();
+            Console.Clear();
+        }
     }
 }
